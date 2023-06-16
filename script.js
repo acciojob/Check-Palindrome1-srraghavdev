@@ -1,7 +1,7 @@
 // complete the given function
 
 function palindrome(str){
-	str = str.replace(/\s+/g, "");
+	str = str.replace(' ', "");
 	str = str.toLowerCase();
 
 	let checker = function (str) {
