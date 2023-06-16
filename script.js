@@ -1,15 +1,23 @@
 // complete the given function
 
 function palindrome(str){
-let start=0
-let end= str.length-1
-	while(end>start){
-		if(s.charAt(start)!== s.charAt(end)){
-			return false
+	str = str.replace(/\s+/g, "");
+	str = str.toLowerCase();
+
+	let checker = function (str) {
+		let s = 0; 
+		let e = str.length-1;
+		
+		while(s < e) {
+			
+			if(str.charAt(s) != str.charAt(e)){
+				return false;
+			}
+			s++;
+			e--;
 		}
-		end--
-		start++
+		return true;
 	}
-	return true
+	return checker(str);
 }
 module.exports = palindrome
